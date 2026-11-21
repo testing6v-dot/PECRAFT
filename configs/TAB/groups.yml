@@ -1,0 +1,28 @@
+# Copy into plugins/TAB/groups.yml after installing TAB.
+# Group names must match LuckPerms group names exactly.
+owner:
+  tabprefix: '&8[&d&lOWNER&8] &d'
+  tagprefix: '&8[&d&lOWNER&8] &d'
+coowner:
+  tabprefix: '&8[&5&lCO-OWNER&8] &5'
+  tagprefix: '&8[&5&lCO-OWNER&8] &5'
+admin:
+  tabprefix: '&8[&c&lADMIN&8] &c'
+  tagprefix: '&8[&c&lADMIN&8] &c'
+moderator:
+  tabprefix: '&8[&9&lMOD&8] &9'
+  tagprefix: '&8[&9&lMOD&8] &9'
+helper:
+  tabprefix: '&8[&b&lHELPER&8] &b'
+  tagprefix: '&8[&b&lHELPER&8] &b'
+media:
+  tabprefix: '&8[&d&lMEDIA&8] &d'
+  tagprefix: '&8[&d&lMEDIA&8] &d'
+vip:
+  tabprefix: '&8[&6&lVIP&8] &6'
+  tagprefix: '&8[&6&lVIP&8] &6'
+default:
+  tabprefix: '&8[&7PLAYER&8] &7'
+  tagprefix: '&8[&7PLAYER&8] &7'
+_DEFAULT_:
+  customtabname: '%player%'
