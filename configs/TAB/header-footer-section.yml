@@ -1,0 +1,15 @@
+# MERGE under 'header-footer:' in plugins/TAB/config.yml.
+header-footer:
+  enabled: true
+  designs:
+    default:
+      header:
+        - ''
+        - '<#A970FF>&lPECRAFT NETWORK</#35D8FF>'
+        - '&7Java &8+ &bBedrock'
+        - ''
+      footer:
+        - ''
+        - '&7Online: &f%online% &8| &7Ping: &f%ping%ms'
+        - '&dHave fun and respect the community!'
+        - ''
