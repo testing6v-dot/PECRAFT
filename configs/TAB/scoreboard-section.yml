@@ -1,0 +1,26 @@
+# MERGE THIS SECTION into plugins/TAB/config.yml under the top-level 'scoreboard:' key.
+# Do not replace the whole TAB config.yml with this snippet.
+scoreboard:
+  enabled: true
+  toggle-command: /sb
+  remember-toggle-choice: true
+  hidden-by-default: false
+  delay-on-join-milliseconds: 500
+  scoreboards:
+    pecraft:
+      title: '<#A970FF>&lPECRAFT</#35D8FF>'
+      lines:
+        - '&8&m----------------'
+        - '&d&lPLAYER'
+        - '&7Name: &f%player%'
+        - '&7Rank: &f%luckperms_primary_group_name%'
+        - '&7Balance: &a%vault_eco_balance_formatted%'
+        - ' '
+        - '&b&lSERVER'
+        - '&7Online: &f%online%&7/&f%maxplayers%'
+        - '&7Ping: &f%ping%ms'
+        - '&7World: &f%world%'
+        - '&8&m----------------'
+        - '&dplay.pecraft.net'
+# NOTE: Replace play.pecraft.net after choosing the real server address.
+# Balance requires Vault + a Vault-compatible economy plugin + PlaceholderAPI expansion.
