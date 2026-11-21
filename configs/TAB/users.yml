@@ -1,0 +1,5 @@
+# Copy into plugins/TAB/users.yml.
+# This gives the configured username an explicit owner prefix in TAB.
+XDM_GAMERX:
+  tabprefix: '&8[&d&lOWNER&8] &d'
+  tagprefix: '&8[&d&lOWNER&8] &d'
