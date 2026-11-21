@@ -1,0 +1,22 @@
+# PECRAFT starter settings. Review and rename to server.properties.
+motd=§6§lPECRAFT §8| §bJava + Bedrock
+server-port=25565
+server-ip=
+online-mode=true
+white-list=false
+enforce-whitelist=false
+max-players=20
+view-distance=6
+simulation-distance=4
+spawn-protection=16
+difficulty=normal
+gamemode=survival
+force-gamemode=false
+pvp=true
+allow-flight=false
+allow-nether=true
+allow-end=true
+enable-command-block=false
+enable-query=false
+enable-rcon=false
+sync-chunk-writes=true
