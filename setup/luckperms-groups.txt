@@ -1,0 +1,31 @@
+# Run these commands in console AFTER installing LuckPerms.
+# These create the groups, weights and prefixes.
+lp creategroup owner
+lp creategroup coowner
+lp creategroup admin
+lp creategroup moderator
+lp creategroup helper
+lp creategroup media
+lp creategroup vip
+lp group owner setweight 1000
+lp group coowner setweight 900
+lp group admin setweight 800
+lp group moderator setweight 700
+lp group helper setweight 600
+lp group media setweight 500
+lp group vip setweight 200
+lp group default setweight 100
+lp group owner meta setprefix 100 "&8[&d&lOWNER&8] &d"
+lp group coowner meta setprefix 90 "&8[&5&lCO-OWNER&8] &5"
+lp group admin meta setprefix 80 "&8[&c&lADMIN&8] &c"
+lp group moderator meta setprefix 70 "&8[&9&lMOD&8] &9"
+lp group helper meta setprefix 60 "&8[&b&lHELPER&8] &b"
+lp group media meta setprefix 50 "&8[&d&lMEDIA&8] &d"
+lp group vip meta setprefix 20 "&8[&6&lVIP&8] &6"
+lp group default meta setprefix 10 "&8[&7PLAYER&8] &7"
+
+# IMPORTANT: run this command only after confirming XDM_GAMERX is your exact in-game account.
+lp user XDM_GAMERX parent set owner
+
+# Owner permissions are intentionally not granted as a wildcard here.
+# Add only the permissions needed by the installed plugins. Avoid giving * to every staff rank.
