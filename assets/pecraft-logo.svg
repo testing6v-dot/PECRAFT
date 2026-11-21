@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">PECRAFT Minecraft Server</title>
+  <desc id="desc">Original dark charcoal and purple PECRAFT server logo with a geometric pixel-inspired crest.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09090d"/><stop offset="1" stop-color="#171323"/></linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b78aff"/><stop offset="1" stop-color="#7137df"/></linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="13" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="250" r="190" fill="#7c3aed" opacity=".08"/>
+  <path d="M600 85 770 183 770 380 600 478 430 380 430 183Z" fill="#111019" stroke="#7d4be5" stroke-width="7" filter="url(#glow)"/>
+  <path d="M600 125 730 200 730 350 600 425 470 350 470 200Z" fill="none" stroke="#b78aff" stroke-opacity=".35" stroke-width="3"/>
+  <path d="M515 205h170v45H560v45h105v45H560v55h-45Z" fill="url(#purple)"/>
+  <path d="M685 205h-45v190h45v-70h30v-45h-30Z" fill="#f4efff"/>
+  <text x="600" y="545" text-anchor="middle" fill="#f7f4ff" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="800" letter-spacing="10">PECRAFT</text>
+  <text x="600" y="588" text-anchor="middle" fill="#aa8ae8" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="6">JAVA  •  BEDROCK  •  SURVIVAL</text>
+</svg>
