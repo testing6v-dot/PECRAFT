@@ -1,0 +1,12 @@
+# Runtime data — do not commit live worlds or credentials
+world/
+world_nether/
+world_the_end/
+plugins/*/data/
+logs/
+crash-reports/
+*.log
+*.jar
+*.zip
+eula.txt
+server.properties
