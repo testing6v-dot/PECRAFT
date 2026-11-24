@@ -32,19 +32,19 @@ Run these as an operator in the lobby. Create each NPC, then select it and attac
 Use right-click; do not use -o or temporary operator execution.
 Example for SMP:
   /npc create SMP
-  /npc command add warp smp <p>
+  /npc command add -p warp smp
 Repeat for each NPC:
   /npc create Lifesteal
-  /npc command add warp lifesteal <p>
+  /npc command add -p warp lifesteal
 
   /npc create PvP
-  /npc command add warp pvp <p>
+  /npc command add -p warp pvp
 
   /npc create Creative
-  /npc command add warp creative <p>
+  /npc command add -p warp creative
 
   /npc create Resources
-  /npc command add warp resources <p>
+  /npc command add -p warp resources
 
 Recommended NPC appearance:
 - SMP: player-type NPC with a friendly skin, name "§bSMP"
@@ -53,15 +53,16 @@ Recommended NPC appearance:
 - Creative: player-type NPC, name "§dCreative"
 - Resources: player-type NPC, name "§aResource World"
 
-Important: /npc command add runs as the server by default. The <p> placeholder supplies the clicking player's name. Never use /npc command add -o for public NPCs.
+Important: the -p option makes the command run as the clicking player, so EssentialsX permissions apply normally. Do not use the -o (operator) option for public NPCs. Test with a non-operator account.
 
 HOLOGRAM ABOVE THE MAIN GATE
 Stand where the floating title should appear, then run:
-  /dh h create pesmp_title <#8B5CF6>PESMP <#22D3EE>NETWORK
-  /dh l add pesmp_title 1 <gray>PLAY • EXPLORE • SURVIVE
-  /dh l add pesmp_title 1 <white>Choose a game mode below
+  /dh create pesmp_title
+  /dh line add pesmp_title <#8B5CF6>PESMP <#22D3EE>NETWORK
+  /dh line add pesmp_title <gray>PLAY • EXPLORE • SURVIVE
+  /dh line add pesmp_title <white>Right-click / tap an NPC to join
 
-If a line command is rejected by the installed DecentHolograms version, use /dh help and the official command reference; do not paste unverified commands repeatedly.
+Move the hologram to the gateway with the installed version's move-here command (check /dh help). DecentHolograms syntax can differ between releases; confirm the exact command in /dh help before running it.
 
 LOBBY PROTECTION
 - Protect the hub region with WorldGuard if installed.
