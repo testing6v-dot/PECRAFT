@@ -1,0 +1,24 @@
+name: Build PESMPCore
+on:
+  push:
+    paths:
+      - 'plugins/PESMPCore/**'
+      - '.github/workflows/build-pesmp-core.yml'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Build plugin
+        run: mvn -B -f plugins/PESMPCore/pom.xml package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PESMPCore
+          path: plugins/PESMPCore/target/*.jar
+          if-no-files-found: error
