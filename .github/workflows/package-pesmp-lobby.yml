@@ -1,0 +1,26 @@
+name: Package PESMP Lobby Datapack
+on:
+  push:
+    paths:
+      - 'datapacks/PESMP-Lobby/**'
+      - '.github/workflows/package-pesmp-lobby.yml'
+  workflow_dispatch:
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate datapack files
+        run: |
+          test -f datapacks/PESMP-Lobby/pack.mcmeta
+          test -f datapacks/PESMP-Lobby/data/pesmp/function/lobby.mcfunction
+          python -m json.tool datapacks/PESMP-Lobby/pack.mcmeta >/dev/null
+      - name: Package datapack
+        run: |
+          cd datapacks
+          zip -r ../PESMP-Lobby-1.21.1.zip PESMP-Lobby
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PESMP-Lobby-1.21.1
+          path: PESMP-Lobby-1.21.1.zip
+          if-no-files-found: error
