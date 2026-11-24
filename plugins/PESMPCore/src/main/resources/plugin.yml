@@ -1,0 +1,23 @@
+name: PESMPCore
+version: 0.1.0
+main: net.pecraft.core.PESMPCore
+api-version: '1.21'
+author: PECRAFT
+description: Lightweight core utilities for PESMP.
+commands:
+  pesmp:
+    description: PESMP core information and administration.
+    usage: /pesmp [info|reload]
+  setspawn:
+    description: Set the server spawn.
+    usage: /setspawn
+  spawn:
+    description: Teleport to the server spawn.
+    usage: /spawn
+permissions:
+  pesmp.admin:
+    description: Access PESMPCore administration.
+    default: op
+  pesmp.spawn:
+    description: Use the spawn command.
+    default: true
