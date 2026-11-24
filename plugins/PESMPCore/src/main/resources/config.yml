@@ -1,0 +1,7 @@
+# PESMPCore settings. Spawn is created in-game with /setspawn.
+spawn: null
+messages:
+  prefix: "&8[&5PESMP&8] "
+  spawn-set: "&aServer spawn saved."
+  spawn-missing: "&cSpawn has not been configured yet."
+  spawn-teleport: "&aTeleported to spawn."
