@@ -1,0 +1,78 @@
+PESMP — LOBBY NPC + HOLOGRAM SETUP
+Target: Paper 1.21.1 / Java 21
+This is a setup guide; it does not install anything on the live server.
+
+RECOMMENDED LIGHTWEIGHT STACK
+- Citizens: persistent NPCs with click commands.
+- DecentHolograms: floating PESMP title and labels.
+- EssentialsX: /warp destinations.
+- Multiverse-Core: only if separate worlds are actually enabled.
+Keep the initial setup small because the current host has 2 GB RAM.
+
+INSTALL
+1. Stop the server.
+2. Download Citizens and DecentHolograms only from their official project pages.
+3. Upload the JARs to /plugins/.
+4. Start the server and confirm both appear as enabled in /plugins and the console.
+5. Do not install multiple hologram plugins at once.
+
+CREATE THE HUB
+- Build the lobby in the default world first.
+- Set the server spawn while standing at the exact center:
+  /setspawn
+- Set Essentials warps only after the destination world exists and you are standing at its safe arrival point:
+  /setwarp smp
+  /setwarp lifesteal
+  /setwarp pvp
+  /setwarp creative
+  /setwarp resources
+
+NPCS
+Run these as an operator in the lobby. Create each NPC, then select it and attach its command.
+Use right-click; do not use -o or temporary operator execution.
+Example for SMP:
+  /npc create SMP
+  /npc command add warp <p> smp
+Repeat for each NPC:
+  /npc create Lifesteal
+  /npc command add warp <p> lifesteal
+
+  /npc create PvP
+  /npc command add warp <p> pvp
+
+  /npc create Creative
+  /npc command add warp <p> creative
+
+  /npc create Resources
+  /npc command add warp <p> resources
+
+Recommended NPC appearance:
+- SMP: player-type NPC with a friendly skin, name "§bSMP"
+- Lifesteal: player-type NPC, name "§cLifesteal"
+- PvP: player-type NPC, name "§6PvP Arena"
+- Creative: player-type NPC, name "§dCreative"
+- Resources: player-type NPC, name "§aResource World"
+
+Important: /npc command add runs as the server by default. The <p> placeholder supplies the clicking player's name. Never use /npc command add -o for public NPCs.
+
+HOLOGRAM ABOVE THE MAIN GATE
+Stand where the floating title should appear, then run:
+  /dh h create pesmp_title <#8B5CF6>PESMP <#22D3EE>NETWORK
+  /dh l add pesmp_title 1 <gray>PLAY • EXPLORE • SURVIVE
+  /dh l add pesmp_title 1 <white>Choose a game mode below
+
+If a line command is rejected by the installed DecentHolograms version, use /dh help and the official command reference; do not paste unverified commands repeatedly.
+
+LOBBY PROTECTION
+- Protect the hub region with WorldGuard if installed.
+- Disable block breaking, block placing, PvP, and fire spread in the lobby.
+- Keep NPCs invulnerable and prevent players from pushing them if the installed Citizens build supports it.
+- Give players no Citizens or hologram administration permissions.
+- Only Owner/Admin should receive setup permissions.
+
+FINAL CHECK
+- Test each NPC with a non-operator account.
+- Confirm each warp exists before connecting an NPC to it.
+- Test Java and Bedrock players.
+- Restart once and verify NPCs and holograms persist.
+- If TPS or memory drops, remove extra NPCs/animations before adding more plugins.
