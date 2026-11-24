@@ -32,19 +32,19 @@ Run these as an operator in the lobby. Create each NPC, then select it and attac
 Use right-click; do not use -o or temporary operator execution.
 Example for SMP:
   /npc create SMP
-  /npc command add warp <p> smp
+  /npc command add warp smp <p>
 Repeat for each NPC:
   /npc create Lifesteal
-  /npc command add warp <p> lifesteal
+  /npc command add warp lifesteal <p>
 
   /npc create PvP
-  /npc command add warp <p> pvp
+  /npc command add warp pvp <p>
 
   /npc create Creative
-  /npc command add warp <p> creative
+  /npc command add warp creative <p>
 
   /npc create Resources
-  /npc command add warp <p> resources
+  /npc command add warp resources <p>
 
 Recommended NPC appearance:
 - SMP: player-type NPC with a friendly skin, name "§bSMP"
