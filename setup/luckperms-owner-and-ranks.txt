@@ -1,0 +1,36 @@
+# Run in the server console after LuckPerms is confirmed loaded.
+# Bootstrap only XDM_GAMERX as Owner.
+lp creategroup owner
+lp creategroup coowner
+lp creategroup manager
+lp creategroup admin
+lp creategroup moderator
+lp creategroup helper
+lp creategroup media
+lp creategroup mvpplus
+lp creategroup vip
+lp creategroup default
+
+lp group owner setweight 1000
+lp group coowner setweight 900
+lp group manager setweight 800
+lp group admin setweight 700
+lp group moderator setweight 600
+lp group helper setweight 500
+lp group media setweight 400
+lp group mvpplus setweight 300
+lp group vip setweight 200
+lp group default setweight 100
+
+# Owner is granted full in-game plugin permission management; do not expose console/RCON.
+lp group owner permission set * true
+lp user XDM_GAMERX parent set owner
+
+# Default group should be the fallback for ordinary players.
+lp group default setweight 100
+lp setdefaultgroup default
+
+# IMPORTANT:
+# This file is a reviewed command plan, not an executed change.
+# Apply only after a fresh restorable backup and confirmation that LuckPerms is loaded.
+# Do not give Owner status to any account except XDM_GAMERX.
