@@ -1,0 +1,43 @@
+PESMP WORLD AND STARTUP PLAN
+Target: Paper 1.21.1, Java 21, MCFreeHost 2 GB RAM.
+
+IMPORTANT CAPACITY RULE
+Do not load every mode at once on 2 GB. Start with one Lobby world and one SMP world. Add Lifesteal, PvP, Creative, and Resource as separate worlds only after memory/TPS testing. Do not promise a multi-server network on a single 2 GB instance.
+
+WORLD PLAN
+- lobby: protected hub; no PvP, building, or item drops.
+- smp: persistent survival world; normal progression.
+- lifesteal: isolated inventory/economy and bounded hearts; enable later.
+- pvp: arena world; opt-in combat only; enable later.
+- creative: separate inventory; enable later.
+- resources: resettable resource gathering world; never reset the SMP world.
+- SMP Nether/End: linked to SMP only.
+
+FIRST BOOT
+1. Back up the server files.
+2. Keep online-mode and authentication settings unchanged.
+3. Confirm Paper 1.21.1 / Java 21.
+4. Upload the PESMP-Lobby datapack folder into the active lobby world's datapacks folder.
+5. Restart the server, then run /reload only if the console is clean.
+6. Stand near 0 64 0 and run /function pesmp:lobby.
+7. If the build appears correctly, stand at the center and run /setspawn.
+8. Install Citizens + DecentHolograms only after confirming plugin compatibility.
+9. Create the SMP world/warp only when ready; NPCs must not point to nonexistent warps.
+10. Add modes gradually and inspect memory after each one.
+
+DATAPACK LOCATION
+<world-folder>/datapacks/PESMP-Lobby/
+Expected files:
+- pack.mcmeta
+- data/pesmp/function/lobby.mcfunction
+
+The function builds a compact hub around coordinates -32..32 at Y=63..76. It does not clear the entire world. Use a fresh world or an empty build area. Backup first.
+
+INITIAL SERVER SETTINGS
+- view-distance=6
+- simulation-distance=4
+- max-players=12 initially
+- enable-rcon=false
+- online-mode=true (do not change authentication mode casually)
+- enable-command-block=false
+- server-port and Bedrock port must remain as assigned by the host panel.
